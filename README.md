@@ -4,6 +4,8 @@
 ### patches applied (so far):
 - alwayscenter
 - attachassideandbelow
+- combo
+- pertag
 - scratchpad
 - steam
 - systray
@@ -13,3 +15,11 @@
 
 ### Configuration
 Check config.def.h for my keybounds, rules, etc.
+
+# slock
+### patches applied:
+- dpms
+- dwmlogo
+
+### Configuration
+Change your username and group in config.def.h before compiling.
