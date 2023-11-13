@@ -28,6 +28,9 @@ CFLAGS = -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}
 LDFLAGS = -s ${LIBS}
 COMPATSRC = explicit_bzero.c
 
+# compiler and linker
+CC = cc -pthread
+
 # On OpenBSD and Darwin remove -lcrypt from LIBS
 #LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -lXext -lXrandr
 # On *BSD remove -DHAVE_SHADOW_H from CPPFLAGS

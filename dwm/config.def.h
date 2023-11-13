@@ -96,6 +96,9 @@ static const char *browsercmd[]  = { "thorium-browser", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
+static const char *rstudiocmd[]  = { "rstudio", NULL };
+static const char *teamscmd[]  = { "gtk-launch", "thorium-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop", NULL };
+static const char *spotifycmd[]  = { "gtk-launch", "thorium-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -108,11 +111,12 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_e,      spawn,          {.v = filescmd } },
 	{ Mod4Mask,                     XK_l,      spawn,          {.v = lockcmd } },
 	{ Mod4Mask,                     XK_m,      spawn,          {.v = emailcmd } },
+	{ Mod4Mask,                     XK_r,      spawn,          {.v = rstudiocmd } },
+	{ Mod4Mask,                     XK_t,      spawn,          {.v = teamscmd } },
+	{ Mod4Mask,                     XK_s,      spawn,          {.v = spotifycmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
     { MODKEY|ShiftMask,             XK_k,      setcfact,       {.f = +0.25} },
@@ -121,18 +125,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
     { Mod4Mask,                     XK_i,      incrgaps,       {.i = +1 } },
  	{ Mod4Mask,                     XK_d,      incrgaps,       {.i = -1 } },
- 	{ Mod4Mask,                     XK_u,      incrigaps,      {.i = +1 } },
- 	{ Mod4Mask|ShiftMask,           XK_u,      incrigaps,      {.i = -1 } },
- 	{ Mod4Mask,                     XK_o,      incrogaps,      {.i = +1 } },
- 	{ Mod4Mask|ShiftMask,           XK_o,      incrogaps,      {.i = -1 } },
- 	{ Mod4Mask,                     XK_6,      incrihgaps,     {.i = +1 } },
- 	{ Mod4Mask|ShiftMask,           XK_6,      incrihgaps,     {.i = -1 } },
- 	{ Mod4Mask,                     XK_7,      incrivgaps,     {.i = +1 } },
- 	{ Mod4Mask|ShiftMask,           XK_7,      incrivgaps,     {.i = -1 } },
- 	{ Mod4Mask,                     XK_8,      incrohgaps,     {.i = +1 } },
- 	{ Mod4Mask|ShiftMask,           XK_8,      incrohgaps,     {.i = -1 } },
- 	{ Mod4Mask,                     XK_9,      incrovgaps,     {.i = +1 } },
- 	{ Mod4Mask|ShiftMask,           XK_9,      incrovgaps,     {.i = -1 } },
  	{ Mod4Mask,                     XK_0,      togglegaps,     {0} },
  	{ Mod4Mask|ShiftMask,           XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    comboview,      {0} },

@@ -1,6 +1,6 @@
 /* user and group to drop privileges to */
-static const char *user  = "nobody";
-static const char *group = "nogroup";
+static const char *user  = "vic";
+static const char *group = "vic";
 
 static const char *colorname[NUMCOLS] = {
     [BACKGROUND] =   "black",     /* after initialization */
@@ -13,6 +13,14 @@ static const int failonclear = 1;
 
 /* time in seconds before the monitor shuts down */
 static const int monitortime = 5;
+
+/* Patch: auto-timeout */
+/* should [command] be run only once? */
+static const int runonce = 1;
+/* length of time (seconds) until [command] is executed */
+static const int timeoffset = 420;
+/* command to be run after [timeoffset] seconds has passed */
+static const char *command = "systemctl suspend";
 
 /* insert grid pattern with scale 1:1, the size can be changed with logosize */
 static const int logosize = 75;
