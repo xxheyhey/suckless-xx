@@ -18,6 +18,7 @@ Check config.def.h for my keybounds, rules, etc.
 
 # slock
 ### patches applied:
+- auto timeout (executes ```systemctl suspend```)
 - dpms
 - dwmlogo
 
