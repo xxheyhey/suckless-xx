@@ -100,7 +100,6 @@ static const char *rstudiocmd[]  = { "rstudio", NULL };
 static const char *teamscmd[]  = { "gtk-launch", "thorium-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop", NULL };
 static const char *spotifycmd[]  = { "gtk-launch", "thorium-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
 static const char *onedrivecmd[]  = { "xdg-open", "https://onedrive.live.com", NULL };
-static const char *whatsappcmd[]  = { "xdg-open", "web.whatsapp.com", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -108,6 +107,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_x,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+
     /* Launching apps */
 	{ Mod4Mask,                     XK_b,      spawn,          {.v = browsercmd } },
 	{ Mod4Mask,                     XK_e,      spawn,          {.v = filescmd } },
@@ -117,7 +117,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_t,      spawn,          {.v = teamscmd } },
 	{ Mod4Mask,                     XK_s,      spawn,          {.v = spotifycmd } },
 	{ Mod4Mask,                     XK_o,      spawn,          {.v = onedrivecmd } },
-	{ Mod4Mask,                     XK_w,      spawn,          {.v = whatsappcmd } },
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
