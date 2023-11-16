@@ -3,8 +3,3 @@
 *.orig
 *.rej
 *.o
-dwm
-slock
-st
-dmenu
-slstatus
