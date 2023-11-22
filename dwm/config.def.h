@@ -56,10 +56,10 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-    { "[\\]",     dwindle },   /* first entry is default */
+    { "[]=",      tile },      /* first entry is default */
     { "><>",      NULL },      /* no layout function means floating behavior */
     { "[M]",      monocle },
-    { "[]=",      tile },
+    { "[\\]",     dwindle },
     { "|M|",      centeredmaster },
     { "[@]",      spiral },
 	{ "H[]",      deck },
@@ -104,8 +104,8 @@ static const char *whatsappcmd[]  = { "xdg-open", "https://web.whatsapp.com", NU
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
-	{ MODKEY,                       XK_x,      spawn,          {.v = dmenucmd } },
+	{ Mod4Mask,                     XK_p,      spawn,          {.v = roficmd } },
+	{ Mod4Mask,                     XK_x,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 
