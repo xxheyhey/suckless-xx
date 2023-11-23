@@ -104,8 +104,8 @@ static const char *whatsappcmd[]  = { "xdg-open", "https://web.whatsapp.com", NU
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ Mod4Mask,                     XK_p,      spawn,          {.v = roficmd } },
-	{ Mod4Mask,                     XK_x,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+    { Mod4Mask,                     XK_p,      spawn,          {.v = roficmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 
