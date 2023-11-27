@@ -10,7 +10,7 @@ static const unsigned int gappov    = 0;        /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 1;    /* 0: systray in the right corner, >0: systray on left of status text */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const unsigned int systrayspacing = 4;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -90,7 +90,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "90x30", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };
 /* Launching apps */
 static const char *browsercmd[]  = { "thorium-browser", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
@@ -100,7 +100,7 @@ static const char *rstudiocmd[]  = { "rstudio", NULL };
 static const char *teamscmd[]  = { "gtk-launch", "thorium-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop", NULL };
 static const char *spotifycmd[]  = { "gtk-launch", "thorium-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
 static const char *onedrivecmd[]  = { "xdg-open", "https://onedrive.live.com", NULL };
-static const char *whatsappcmd[]  = { "xdg-open", "https://web.whatsapp.com", NULL };
+static const char *whatsappcmd[]  = { "gtk-launch", "thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
