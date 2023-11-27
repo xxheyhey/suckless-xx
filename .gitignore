@@ -3,7 +3,3 @@
 *.orig
 *.rej
 *.o
-*dwm
-*st
-*slock
-*slstatus
