@@ -101,6 +101,7 @@ static const char *teamscmd[]  = { "gtk-launch", "thorium-cifhbcnohmdccbgoicgdjp
 static const char *spotifycmd[]  = { "gtk-launch", "thorium-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
 static const char *onedrivecmd[]  = { "xdg-open", "https://onedrive.live.com", NULL };
 static const char *whatsappcmd[]  = { "gtk-launch", "thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
+static const char *youtubecmd[]  = { "xdg-open", "https://www.youtube.com/", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -119,6 +120,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_s,      spawn,          {.v = spotifycmd } },
 	{ Mod4Mask,                     XK_o,      spawn,          {.v = onedrivecmd } },
 	{ Mod4Mask,                     XK_w,      spawn,          {.v = whatsappcmd } },
+	{ Mod4Mask,                     XK_y,      spawn,          {.v = whatsappcmd } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -129,8 +131,8 @@ static const Key keys[] = {
  	{ MODKEY|ShiftMask,             XK_j,      setcfact,       {.f = -0.25} },
  	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-    { Mod4Mask,                     XK_i,      incrgaps,       {.i = +1 } },
- 	{ Mod4Mask,                     XK_d,      incrgaps,       {.i = -1 } },
+    { MODKEY,                       XK_i,      incrgaps,       {.i = +1 } },
+ 	{ MODKEY,                       XK_d,      incrgaps,       {.i = -1 } },
  	{ Mod4Mask,                     XK_0,      togglegaps,     {0} },
  	{ Mod4Mask|ShiftMask,           XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    comboview,      {0} },
