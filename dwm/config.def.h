@@ -99,7 +99,7 @@ static const char *emailcmd[]  = { "thunderbird", NULL };
 static const char *rstudiocmd[]  = { "rstudio", NULL };
 static const char *teamscmd[]  = { "gtk-launch", "thorium-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop", NULL };
 static const char *spotifycmd[]  = { "gtk-launch", "thorium-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
-static const char *onedrivecmd[]  = { "xdg-open", "https://onedrive.live.com", NULL };
+static const char *onedrivecmd[]  = { "gtk-launch", "thorium-abnfpfhjmipcnaibcolbacfhgfcmjjbn-Default.desktop", NULL };
 static const char *whatsappcmd[]  = { "gtk-launch", "thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
 static const char *youtubecmd[]  = { "xdg-open", "https://www.youtube.com/", NULL };
 
