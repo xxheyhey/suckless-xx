@@ -16,8 +16,8 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Ubuntu Mono:style=Regular:size=15" };
-static const char dmenufont[]       = "Ubuntu Mono:style=Regular:size=15";
+static const char *fonts[]          = { "UbuntuMono Nerd Font:style=Regular:size=15" };
+static const char dmenufont[]       = "UbuntuMono Nerd Font:style=Regular:size=15";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "R_x11",    NULL,       NULL,	      0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -92,15 +92,15 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };
 /* Launching apps */
-static const char *browsercmd[]  = { "thorium-browser", NULL };
+static const char *browsercmd[]  = { "google-chrome", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
 static const char *rstudiocmd[]  = { "rstudio", NULL };
-static const char *teamscmd[]  = { "gtk-launch", "thorium-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop", NULL };
-static const char *spotifycmd[]  = { "gtk-launch", "thorium-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
-static const char *onedrivecmd[]  = { "gtk-launch", "thorium-abnfpfhjmipcnaibcolbacfhgfcmjjbn-Default.desktop", NULL };
-static const char *whatsappcmd[]  = { "gtk-launch", "thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
+static const char *teamscmd[]  = { "gtk-launch", "chrome-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop", NULL };
+static const char *spotifycmd[]  = { "gtk-launch", "chrome-pjibgclleladliembfgfagdaldikeohf-Default.desktop", NULL };
+static const char *onedrivecmd[]  = { "gtk-launch", "chrome-abnfpfhjmipcnaibcolbacfhgfcmjjbn-Default.desktop", NULL };
+static const char *whatsappcmd[]  = { "gtk-launch", "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
 static const char *youtubecmd[]  = { "xdg-open", "https://www.youtube.com/", NULL };
 
 static const Key keys[] = {
@@ -111,6 +111,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 
     /* Launching apps */
+    { Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
 	{ Mod4Mask,                     XK_b,      spawn,          {.v = browsercmd } },
 	{ Mod4Mask,                     XK_e,      spawn,          {.v = filescmd } },
 	{ Mod4Mask,                     XK_l,      spawn,          {.v = lockcmd } },
@@ -120,7 +121,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_s,      spawn,          {.v = spotifycmd } },
 	{ Mod4Mask,                     XK_o,      spawn,          {.v = onedrivecmd } },
 	{ Mod4Mask,                     XK_w,      spawn,          {.v = whatsappcmd } },
-	{ Mod4Mask,                     XK_y,      spawn,          {.v = whatsappcmd } },
+	{ Mod4Mask,                     XK_y,      spawn,          {.v = youtubecmd } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
