@@ -92,7 +92,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };
 /* Launching apps */
-static const char *browsercmd[]  = { "google-chrome", NULL };
+static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
