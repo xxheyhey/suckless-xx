@@ -102,6 +102,7 @@ static const char *spotifycmd[]  = { "gtk-launch", "chrome-pjibgclleladliembfgfa
 static const char *onedrivecmd[]  = { "gtk-launch", "chrome-abnfpfhjmipcnaibcolbacfhgfcmjjbn-Default.desktop", NULL };
 static const char *whatsappcmd[]  = { "gtk-launch", "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
 static const char *youtubecmd[]  = { "xdg-open", "https://www.youtube.com/", NULL };
+static const char *youtubemusiccmd[]  = { "gtk-launch", "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default.desktop", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -122,6 +123,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_o,      spawn,          {.v = onedrivecmd } },
 	{ Mod4Mask,                     XK_w,      spawn,          {.v = whatsappcmd } },
 	{ Mod4Mask,                     XK_y,      spawn,          {.v = youtubecmd } },
+	{ Mod4Mask|ShiftMask,           XK_y,      spawn,          {.v = youtubemusiccmd } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
