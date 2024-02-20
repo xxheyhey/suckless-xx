@@ -23,4 +23,5 @@ Check config.def.h for my keybounds, rules, etc.
 - dwmlogo
 
 ### Configuration
-Change your username and group in config.def.h before compiling.
+Change your username and group in config.def.h before compiling (or in config.h
+and recompile).
