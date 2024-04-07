@@ -67,6 +67,7 @@ static const struct arg args[] = {
 	/*  function        format          argument */
     {   cpu_perc,       "CPU: %s%% | ",      "NULL"  },
     {   ram_perc,       "Mem: %s%% | ",      "NULL"  },
+    {   run_command,    "Br: %s%% | ",       "get-brightness" },
     {   battery_perc,   "Bat: %s%% ",        "BAT1"  },
     {   battery_state,  "%s | ",             "BAT1"  },
     {   run_command,    "Vol: %s%% | ",      "amixer -c 0 get Master | tail -1 | awk '{print $4}' | sed 's/[^0-9]*//g'" },
