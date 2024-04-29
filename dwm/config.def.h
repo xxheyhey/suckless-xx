@@ -102,6 +102,7 @@ static const char *officecmd[]  = { "libreoffice", NULL };
 static const char *whatsappcmd[]  = { "gtk-launch", "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop", NULL };
 static const char *youtubecmd[]  = { "xdg-open", "https://www.youtube.com/", NULL };
 static const char *youtubemusiccmd[]  = { "gtk-launch", "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default.desktop", NULL };
+static const char *microsoft365cmd[]  = { "gtk-launch", "chrome-onhfoihkhodaeblmangmjjgfpfehnlkm-Default.desktop", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -123,6 +124,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_w,      spawn,          {.v = whatsappcmd } },
 	{ Mod4Mask,                     XK_y,      spawn,          {.v = youtubecmd } },
 	{ Mod4Mask|ShiftMask,           XK_y,      spawn,          {.v = youtubemusiccmd } },
+	{ Mod4Mask,                     XK_3,      spawn,          {.v = microsoft365cmd } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -144,9 +146,9 @@ static const Key keys[] = {
     { Mod4Mask,                     XK_0,      defaultgaps,    {0} },
 	{ Mod4Mask,                     XK_1,      setlayout,      {.v = &layouts[3]} },
 	{ Mod4Mask,                     XK_2,      setlayout,      {.v = &layouts[4]} },
-	{ Mod4Mask,                     XK_3,      setlayout,      {.v = &layouts[5]} },
-	{ Mod4Mask,                     XK_4,      setlayout,      {.v = &layouts[6]} },
-	{ Mod4Mask,                     XK_5,      setlayout,      {.v = &layouts[7]} },
+	{ Mod4Mask,                     XK_4,      setlayout,      {.v = &layouts[5]} },
+	{ Mod4Mask,                     XK_5,      setlayout,      {.v = &layouts[6]} },
+	{ Mod4Mask,                     XK_6,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY|ShiftMask,             XK_space,  setlayout,      {0} },
 	{ MODKEY,                       XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
