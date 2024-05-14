@@ -5,6 +5,7 @@
 - alwayscenter
 - attachassideandbelow
 - combo
+- hide_vacant_tags
 - pertag
 - scratchpad
 - steam
