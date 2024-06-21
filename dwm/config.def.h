@@ -89,7 +89,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "--config-file", "~/.config/alacritty/scratchpad_alacritty.toml", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "--config-file", "/home/vic/.config/alacritty/scratchpad_alacritty.toml", NULL };
 /* Launching apps */
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
