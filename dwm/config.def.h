@@ -104,6 +104,8 @@ static const char *youtubecmd[]  = { "xdg-open", "https://www.youtube.com/", NUL
 static const char *youtubemusiccmd[]  = { "gtk-launch", "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default.desktop", NULL };
 static const char *microsoft365cmd[]  = { "gtk-launch", "chrome-onhfoihkhodaeblmangmjjgfpfehnlkm-Default.desktop", NULL };
 static const char *tmuxcmd[]  = { "alacritty", "-e", "tmux-sessionizer", NULL };
+static const char *zoterocmd[]  = { "zotero", NULL };
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -127,6 +129,7 @@ static const Key keys[] = {
 	{ Mod4Mask|ShiftMask,           XK_y,      spawn,          {.v = youtubemusiccmd } },
 	{ Mod4Mask,                     XK_3,      spawn,          {.v = microsoft365cmd } },
 	{ Mod4Mask,                     XK_f,      spawn,          {.v = tmuxcmd } },
+	{ Mod4Mask,                     XK_z,      spawn,          {.v = zoterocmd } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
