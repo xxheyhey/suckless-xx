@@ -105,6 +105,9 @@ static const char *youtubemusiccmd[]  = { "gtk-launch", "chrome-cinhimbnkkaeohfg
 static const char *microsoft365cmd[]  = { "gtk-launch", "chrome-onhfoihkhodaeblmangmjjgfpfehnlkm-Default.desktop", NULL };
 static const char *tmuxcmd[]  = { "alacritty", "-e", "tmux-sessionizer", NULL };
 static const char *zoterocmd[]  = { "zotero", NULL };
+static const char *nightycmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "2800", NULL };
+static const char *nightlightcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "4100", NULL };
+static const char *nightoffcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "6500", NULL };
 
 
 static const Key keys[] = {
@@ -130,6 +133,10 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_3,      spawn,          {.v = microsoft365cmd } },
 	{ Mod4Mask,                     XK_f,      spawn,          {.v = tmuxcmd } },
 	{ Mod4Mask,                     XK_z,      spawn,          {.v = zoterocmd } },
+	{ MODKEY|ShiftMask,             XK_Page_Up, spawn,         {.v = nightycmd } },
+	{ MODKEY|ShiftMask,             XK_Page_Down, spawn,       {.v = nightlightcmd } },
+	{ MODKEY|ShiftMask,             XK_End,    spawn,          {.v = nightoffcmd } },
+
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
