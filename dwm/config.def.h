@@ -135,7 +135,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_z,      spawn,          {.v = zoterocmd } },
 	{ MODKEY|ShiftMask,             XK_Page_Up, spawn,         {.v = nightycmd } },
 	{ MODKEY|ShiftMask,             XK_Page_Down, spawn,       {.v = nightlightcmd } },
-	{ MODKEY|ShiftMask,             XK_End,    spawn,          {.v = nightoffcmd } },
+	{ MODKEY,                       XK_End,    spawn,          {.v = nightoffcmd } },
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
