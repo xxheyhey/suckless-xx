@@ -108,6 +108,7 @@ static const char *zoterocmd[]  = { "zotero", NULL };
 static const char *nightycmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "2800", NULL };
 static const char *nightlightcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "4100", NULL };
 static const char *nightoffcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "6500", NULL };
+static const char *ridercmd[]  = { "rider", NULL };
 
 
 static const Key keys[] = {
@@ -136,6 +137,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Page_Up, spawn,         {.v = nightycmd } },
 	{ MODKEY|ShiftMask,             XK_Page_Down, spawn,       {.v = nightlightcmd } },
 	{ MODKEY,                       XK_End,    spawn,          {.v = nightoffcmd } },
+	{ Mod4Mask,                     XK_j,      spawn,          {.v = ridercmd } },
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
