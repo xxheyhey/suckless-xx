@@ -12,11 +12,11 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 1;
 
 /* time in seconds before the monitor shuts down */
-static const int monitortime = 5;
+static const int monitortime = 10;
 
 /* Patch: auto-timeout */
 /* should [command] be run only once? */
-static const int runonce = 1;
+static const int runonce = 0;
 /* length of time (seconds) until [command] is executed */
 static const int timeoffset = 420;
 /* command to be run after [timeoffset] seconds has passed */
