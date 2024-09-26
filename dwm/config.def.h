@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "R_x11",    NULL,       NULL,	      0,            1,           -1 },
+	{ NULL,       NULL,    "Nice Window", 0,            1,           -1 },
 };
 
 /* layout(s) */
