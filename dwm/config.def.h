@@ -111,6 +111,7 @@ static const char *nightlightcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", 
 static const char *nightoffcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "6500", NULL };
 static const char *ridercmd[]  = { "rider", NULL };
 static const char *audiocmd[]  = { "pavucontrol", NULL };
+static const char *bluemancmd[]  = { "blueman-manager", NULL };
 
 
 static const Key keys[] = {
@@ -141,6 +142,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_End,    spawn,          {.v = nightoffcmd } },
 	{ Mod4Mask,                     XK_j,      spawn,          {.v = ridercmd } },
 	{ Mod4Mask,                     XK_a,      spawn,          {.v = audiocmd } },
+	{ Mod4Mask,                     XK_i,      spawn,          {.v = bluemancmd } },
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
