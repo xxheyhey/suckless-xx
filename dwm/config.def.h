@@ -40,10 +40,10 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class          instance    title          tags mask     isfloating   monitor */
-	{ "R_x11",        NULL,       NULL,	         0,            1,           -1 },
-	{ NULL,           NULL,       "Nice Window", 0,            1,           -1 },
-	{ "Godot_Engine", NULL,       NULL,	         0,            1,           -1 },
+	/* class      instance          title          tags mask     isfloating   monitor */
+	{ "R_x11",    NULL,             NULL,	         0,            1,           -1 },
+	{ NULL,       NULL,             "Nice Window",   0,            1,           -1 },
+	{ NULL,       "Godot_Engine",   NULL,	         0,            1,           -1 }
 };
 
 /* layout(s) */
