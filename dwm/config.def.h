@@ -40,9 +40,10 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "R_x11",    NULL,       NULL,	      0,            1,           -1 },
-	{ NULL,       NULL,    "Nice Window", 0,            1,           -1 },
+	/* class          instance    title          tags mask     isfloating   monitor */
+	{ "R_x11",        NULL,       NULL,	         0,            1,           -1 },
+	{ NULL,           NULL,       "Nice Window", 0,            1,           -1 },
+	{ "Godot_Engine", NULL,       NULL,	         0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -112,6 +113,7 @@ static const char *nightoffcmd[]  = { "gammastep", "-m", "randr", "-P", "-O", "6
 static const char *ridercmd[]  = { "rider", NULL };
 static const char *audiocmd[]  = { "pavucontrol", NULL };
 static const char *bluemancmd[]  = { "blueman-manager", NULL };
+static const char *godotcmd[]  = { "godot", NULL };
 
 
 static const Key keys[] = {
@@ -143,6 +145,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_j,      spawn,          {.v = ridercmd } },
 	{ Mod4Mask,                     XK_a,      spawn,          {.v = audiocmd } },
 	{ Mod4Mask,                     XK_i,      spawn,          {.v = bluemancmd } },
+	{ Mod4Mask,                     XK_g,      spawn,          {.v = godotcmd } },
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
