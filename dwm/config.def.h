@@ -97,7 +97,6 @@ static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
-static const char *rstudiocmd[]  = { "rstudio", NULL };
 static const char *teamscmd[]  = { "teams-for-linux", NULL };
 static const char *spotifycmd[]  = { "spotify", NULL };
 static const char *officecmd[]  = { "onlyoffice-desktopeditors", NULL };
@@ -114,6 +113,7 @@ static const char *ridercmd[]  = { "rider", NULL };
 static const char *audiocmd[]  = { "pavucontrol", NULL };
 static const char *bluemancmd[]  = { "blueman-manager", NULL };
 static const char *godotcmd[]  = { "godot", NULL };
+static const char *asepritecmd[]  = { "aseprite", NULL };
 
 
 static const Key keys[] = {
@@ -129,7 +129,6 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_e,      spawn,          {.v = filescmd } },
 	{ Mod4Mask,                     XK_l,      spawn,          {.v = lockcmd } },
 	{ Mod4Mask,                     XK_m,      spawn,          {.v = emailcmd } },
-	{ Mod4Mask,                     XK_r,      spawn,          {.v = rstudiocmd } },
 	{ Mod4Mask,                     XK_t,      spawn,          {.v = teamscmd } },
 	{ Mod4Mask,                     XK_s,      spawn,          {.v = spotifycmd } },
 	{ Mod4Mask,                     XK_o,      spawn,          {.v = officecmd } },
@@ -146,6 +145,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_a,      spawn,          {.v = audiocmd } },
 	{ Mod4Mask,                     XK_i,      spawn,          {.v = bluemancmd } },
 	{ Mod4Mask,                     XK_g,      spawn,          {.v = godotcmd } },
+	{ Mod4Mask,                     XK_r,      spawn,          {.v = asepritecmd } },
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
