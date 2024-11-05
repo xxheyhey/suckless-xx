@@ -13,7 +13,7 @@ static const unsigned int systrayonleft = 1;    /* 0: systray in the right corne
 static const unsigned int systrayspacing = 4;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;        /* 0 means no systray */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:style=Regular:size=15" };
@@ -149,6 +149,7 @@ static const Key keys[] = {
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ Mod4Mask,                     Mod4Mask,  togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
