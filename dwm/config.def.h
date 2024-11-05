@@ -3,10 +3,10 @@
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 0;        /* horiz inner gap between windows */
-static const unsigned int gappiv    = 0;        /* vert inner gap between windows */
-static const unsigned int gappoh    = 0;        /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 0;        /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 16;        /* horiz inner gap between windows */
+static const unsigned int gappiv    = 16;        /* vert inner gap between windows */
+static const unsigned int gappoh    = 16;        /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 16;        /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 1;    /* 0: systray in the right corner, >0: systray on left of status text */
