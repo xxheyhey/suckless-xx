@@ -3,9 +3,8 @@ dwm/dwm
 slock/slock
 slstatus/slstatus
 st/st
-*config.h
-*.bak
-*.orig
-*.rej
-*.o
-slstatus/components
+**/*config.h
+**/*.bak
+**/*.orig
+**/*.rej
+**/*.o
