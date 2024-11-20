@@ -21,14 +21,14 @@ static const char dmenufont[]       = "UbuntuMono Nerd Font:style=Regular:size=1
 static const char col_black[]       = "#000000";
 static const char col_white[]       = "#f5f5f5";
 static const char col_white1[]      = "#ffefe6";
-static const char col_white2[]      = "#ffdfcc";
+static const char col_white2[]      = "#f2dcdc";
 static const char col_gray1[]       = "#1E1D23";
 static const char col_cyan[]        = "#005577";
 static const char col_cherry[]      = "#940d53";
 static const char col_darkpurple[]  = "#25124d";
 static const char col_orange[]      = "#7a1f00";
 static const char col_salmon[]      = "#f77c55";
-static const char col_lightblue[]   = "#b3b8ff";
+static const char col_lightblue[]   = "#b4befe";
 static const char *colors[][3]      = {
 	/*               fg          bg         border   */
 	[SchemeNorm] = { col_white2, col_gray1, col_gray1 },
