@@ -22,14 +22,19 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
+static const char col_gray5[]       = "#1E1D23";
+static const char col_gray6[]       = "#b39b8d";
+static const char col_offwhite[]    = "#ffdfcc";
 static const char col_cyan[]        = "#005577";
 static const char col_cherry[]      = "#940d53";
 static const char col_darkpurple[]  = "#25124d";
+static const char col_orange[]      = "#7a1f00";
+static const char col_salmon[]      = "#f77c55";
 static const char col_black[]       = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_darkpurple,  col_darkpurple },
+	[SchemeNorm] = { col_gray6, col_gray5, col_darkpurple },
+	[SchemeSel]  = { col_salmon, col_gray5,  col_darkpurple },
 };
 
 /* tagging */
