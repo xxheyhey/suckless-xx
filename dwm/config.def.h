@@ -18,23 +18,21 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:style=Regular:size=15" };
 static const char dmenufont[]       = "UbuntuMono Nerd Font:style=Regular:size=15";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_gray5[]       = "#1E1D23";
-static const char col_gray6[]       = "#a18a81";
-static const char col_offwhite[]    = "#ffdfcc";
+static const char col_black[]       = "#000000";
+static const char col_white[]       = "#f5f5f5";
+static const char col_white1[]      = "#ffefe6";
+static const char col_white2[]      = "#ffdfcc";
+static const char col_gray1[]       = "#1E1D23";
 static const char col_cyan[]        = "#005577";
 static const char col_cherry[]      = "#940d53";
 static const char col_darkpurple[]  = "#25124d";
 static const char col_orange[]      = "#7a1f00";
 static const char col_salmon[]      = "#f77c55";
-static const char col_black[]       = "#000000";
+static const char col_lightblue[]   = "#b3b8ff";
 static const char *colors[][3]      = {
-	/*               fg            bg         border   */
-	[SchemeNorm] = { col_gray6,    col_gray5, col_darkpurple },
-	[SchemeSel]  = { col_offwhite, col_gray5, col_darkpurple },
+	/*               fg          bg         border   */
+	[SchemeNorm] = { col_white2, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_lightblue, col_gray1, col_gray1 },
 };
 
 /* tagging */
@@ -93,7 +91,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_white1, "-sb", col_cyan, "-sf", col_white, NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
