@@ -23,13 +23,14 @@ static const char col_white[]       = "#f5f5f5";
 static const char col_white1[]      = "#ffefe6";
 static const char col_white2[]      = "#f2dcdc";
 static const char col_gray1[]       = "#1E1D23";
+static const char col_purple[]      = "#885ed1";
 static const char col_darkpurple[]  = "#25124d";
 static const char col_orange[]      = "#f08f41";
 static const char col_lightblue[]   = "#b4befe";
 static const char *colors[][3]      = {
 	/*               fg          bg         border   */
 	[SchemeNorm] = { col_white2, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_orange, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_purple, col_gray1, col_gray1 },
 };
 
 /* tagging */
