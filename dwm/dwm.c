@@ -208,7 +208,6 @@ static unsigned int getsystraywidth();
 static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
 static void grabbuttons(Client *c, int focused);
 static void grabkeys(void);
-static void incnmaster(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
@@ -219,7 +218,6 @@ static void motionnotify(XEvent *e);
 static void movemouse(const Arg *arg);
 static Client *nexttagged(Client *c);
 static Client *nexttiled(Client *c);
-static void pop(Client *c);
 static void propertynotify(XEvent *e);
 static void quit(const Arg *arg);
 static Monitor *recttomon(int x, int y, int w, int h);
@@ -278,7 +276,6 @@ static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 
 static void keyrelease(XEvent *e);
-static void combotag(const Arg *arg);
 static void comboview(const Arg *arg);
 
 
@@ -344,20 +341,6 @@ static int combo = 0;
 void
 keyrelease(XEvent *e) {
 	combo = 0;
-}
-
-void
-combotag(const Arg *arg) {
-	if(selmon->sel && arg->ui & TAGMASK) {
-		if (combo) {
-			selmon->sel->tags |= arg->ui & TAGMASK;
-		} else {
-			combo = 1;
-			selmon->sel->tags = arg->ui & TAGMASK;
-		}
-		focus(NULL);
-		arrange(selmon);
-	}
 }
 
 void
@@ -1221,13 +1204,6 @@ grabkeys(void)
 	}
 }
 
-void
-incnmaster(const Arg *arg)
-{
-	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = MAX(selmon->nmaster + arg->i, 0);
-	arrange(selmon);
-}
-
 #ifdef XINERAMA
 static int
 isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *info)
@@ -1479,15 +1455,6 @@ nexttiled(Client *c)
 {
 	for (; c && (c->isfloating || !ISVISIBLE(c)); c = c->next);
 	return c;
-}
-
-void
-pop(Client *c)
-{
-	detach(c);
-	attach(c);
-	focus(c);
-	arrange(c->mon);
 }
 
 void
