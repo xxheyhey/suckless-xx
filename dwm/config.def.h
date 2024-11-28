@@ -16,13 +16,13 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:style=Regular:size=15" };
-static const char dmenufont[]       = "UbuntuMono Nerd Font:style=Regular:size=15";
+static const char *fonts[]          = { "Helvetica Neue:style=Regular:size=14" };
+static const char dmenufont[]       = "Helvetica Neue:style=Regular:size=15";
 static const char col_black[]       = "#000000";
 static const char col_white[]       = "#f5f5f5";
 static const char col_white1[]      = "#ffefe6";
 static const char col_white2[]      = "#f2dcdc";
-static const char col_gray1[]       = "#1E1D23";
+static const char col_gray1[]       = "#120f0e";
 static const char col_purple[]      = "#885ed1";
 static const char col_darkpurple[]  = "#25124d";
 static const char col_orange[]      = "#f08f41";
@@ -93,7 +93,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "--config-file", "/home/vic/.config/alacritty/scratchpad_alacritty.toml", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };
 /* Launching apps */
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
@@ -201,9 +201,9 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         Mod4Mask,       Button1,        movemouse,      {0} },
+	{ ClkClientWin,         Mod4Mask,       Button2,        togglefloating, {0} },
+	{ ClkClientWin,         Mod4Mask,       Button3,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
